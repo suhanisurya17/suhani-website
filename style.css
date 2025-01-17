@@ -10,6 +10,7 @@
   min-height: 100vh;
   background-image: url(attributes/background.png);
   background-position: center;
-  background0size: cover;
+  opacity: 30%;
+  background-size: cover;
   padding: 10px 10%;
 }
