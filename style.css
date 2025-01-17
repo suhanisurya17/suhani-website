@@ -4,3 +4,12 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif";
 }
+
+.susu{
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(attributes/background.png);
+  background-position: center;
+  background0size: cover;
+  padding: 10px 10%;
+}
