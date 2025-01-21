@@ -46,7 +46,7 @@ nav ul li a{
 
 .resume{
   position: absolute; /* Position the resume tab absolutely */
-  top: 10px; /* Adjust the top position as needed */
+  top: 20px; /* Adjust the top position as needed */
   right: 50%; /* Adjust the right position as needed */
 }
 
