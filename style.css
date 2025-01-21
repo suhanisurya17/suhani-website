@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif";
+  font-family: "Poppins", sans-serif;
 }
 
 .susu{
@@ -20,17 +20,22 @@ nav{
   padding: 10px 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center; /* Center the navbar */
 }
 
 .logo{
-  width:140px;
+  width: 140px;
+}
+
+nav ul{
+  display: flex; /* Ensure the list items are displayed horizontally */
+  padding: 0;
 }
 
 nav ul li{
-  display:inline-block;
+  display: inline-block;
   list-style: none;
-  margin: 10px 15px'
+  margin: 10px 15px;
 }
 
 nav ul li a{
@@ -38,5 +43,3 @@ nav ul li a{
   color: #333;
   font-weight: 400;
 }
-  
-
