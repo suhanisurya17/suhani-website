@@ -43,20 +43,3 @@ nav ul li a{
   color: #333;
   font-weight: 400;
 }
-
-.resume{
-  position: absolute; /* Position the resume tab absolutely */
-  top: 20px; /* Adjust the top position as needed */
-  right: 50%; /* Adjust the right position as needed */
-}
-
-.resume li{
-  list-style: none;
-}
-
-.resume a{
-  text-decoration: none;
-  color: #333;
-  font-weight: 400;
-}
-
