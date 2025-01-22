@@ -1,57 +1,110 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
-.susu{
-  width: 100%;
-  min-height: 100vh;
-  background-image: url(attributes/background.png);
-  background-position: center;
-  opacity: 70%;
-  background-size: cover;
-  padding: 10px 10%;
-  overflow: hidden;
+/* Background Styling */
+.susu {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(attributes/background.png);
+    background-position: center;
+    opacity: 70%;
+    background-size: cover;
+    padding: 10px 10%;
+    overflow: hidden;
 }
 
-nav{
-  padding: 10px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center; /* Center the navbar */
+/* Navigation Bar */
+nav {
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Align items vertically */
+    padding: 10px 0;
 }
 
-.logo{
-  width: 140px;
+/* Navigation Menu List */
+nav ul {
+    display: flex; /* Makes list items horizontal */
+    justify-content: center; /* Centers the buttons in the navbar */
+    gap: 20px; /* Space between buttons */
+    list-style: none; /* Removes bullet points */
+    margin: 0; /* Removes extra margin */
+    padding: 0; /* Removes extra padding */
+    flex-grow: 1; /* Ensures the menu stretches to balance spacing */
 }
 
-nav ul{
-  display: flex; /* Ensure the list items are displayed horizontally */
-  padding: 0;
+/* Navigation List Items */
+nav ul li {
+    display: inline-block; /* Keeps list items inline */
 }
 
-nav ul li{
-  display: inline-block;
-  list-style: none;
-  margin: 10px 15px;
+/* Navigation Links */
+nav ul li a {
+    text-decoration: none; /* Removes underline */
+    color: #333; /* Text color */
+    font-weight: 400; /* Font weight */
+    font-size: 16px; /* Font size */
+    padding: 10px 20px; /* Adds clickable area around links */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
 }
 
-nav ul li a{
-  text-decoration: none;
-  color: #333;
-  font-weight: 400;
+/* Hover Effect for Links */
+nav ul li a:hover {
+    color: #007bff; /* Changes color on hover */
+}
+
+/* Resume Button Container */
+nav div {
+    margin-left: auto; /* Pushes the resume button to the right */
+}
+
+/* Resume Button Styling */
+/* Styling the Resume Button */
+
+nav div .button.linkedin {
+    display: inline-block; /* Ensures the element behaves like a button */
+    text-decoration: none; /* Removes underlines */
+    padding: 10px 40px; /* Adds padding for better click area */
+    color: #fff; /* White text */
+    background: url('attributes/nav-icon1.svg') no-repeat center center; /* Sets the background image */
+    background-size: contain; /* Scales the image to fit the button */
+    border: none; /* Removes default border */
+    border-radius: 30px; /* Adds rounded corners */
+    cursor: pointer; /* Shows pointer on hover */
+    font-size: 14px; /* Adjusts font size */
+    transition: transform 0.3s ease; /* Adds a hover effect */
+}
+
+nav div .button.linkedin:hover {
+    transform: scale(1.1); /* Slightly enlarges the button on hover */
+    filter: brightness(1.2); /* Makes the button brighter on hover */
 }
 
 
-nav div{
-  margin-left: auto; /* Push the div to the right */
+nav div .button.button1 {
+    display: inline-block; /* Makes the button inline */
+    text-decoration: none; /* Removes underline */
+    padding: 14px 40px; /* Adds padding */
+    color: #fff; /* White text */
+    background-image: linear-gradient(45deg, #df4881, #c430d7); /* Gradient background */
+    background-size: 200%; /* Enlarges the gradient */
+    background-position: center; /* Centers the gradient */
+    font-size: 14px; /* Font size */
+    border: none; /* Removes default border */
+    border-radius: 30px; /* Rounds edges */
+    cursor: pointer; /* Shows a pointer on hover */
+    transition: background-position 0.3s ease; /* Smooth hover effect */
 }
 
-nav div a{
-  text-decoration: none;
-  color: #333;
-  font-weight: 400;
-  margin-left: 10px 15px; /* Add some space between the links */
+/* Hover Effect for the Resume Button */
+nav div .button.button1:hover {
+    background-position: right; /* Shifts the gradient on hover */
+}
+
+div .content h1 {
+    text-align: center;
 }
