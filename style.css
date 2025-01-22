@@ -1,11 +1,142 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suhani's Website</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Background Styling */
+.susu {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(attributes/background.png);
+    background-position: center;
+    opacity: 70%;
+    background-size: cover;
+    padding: 10px 10%;
+    overflow: hidden;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Align items vertically */
+    padding: 10px 0;
+}
+
+/* Navigation Menu List */
+nav ul {
+    display: flex; /* Makes list items horizontal */
+    justify-content: center; /* Centers the buttons in the navbar */
+    gap: 20px; /* Space between buttons */
+    list-style: none; /* Removes bullet points */
+    margin: 0; /* Removes extra margin */
+    padding: 0; /* Removes extra padding */
+    flex-grow: 1; /* Ensures the menu stretches to balance spacing */
+}
+
+/* Navigation List Items */
+nav ul li {
+    display: inline-block; /* Keeps list items inline */
+}
+
+/* Navigation Links */
+nav ul li a {
+    text-decoration: none; /* Removes underline */
+    color: #333; /* Text color */
+    font-weight: 400; /* Font weight */
+    font-size: 16px; /* Font size */
+    padding: 10px 20px; /* Adds clickable area around links */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+/* Hover Effect for Links */
+nav ul li a:hover {
+    color: #007bff; /* Changes color on hover */
+}
+
+/* Resume Button Container */
+nav div {
+    margin-left: auto; /* Pushes the resume button to the right */
+}
+
+/* Resume Button Styling */
+/* Styling the Resume Button */
+
+nav div .button.linkedin {
+    display: inline-block; /* Ensures the element behaves like a button */
+    text-decoration: none; /* Removes underlines */
+    padding: 10px 40px; /* Adds padding for better click area */
+    color: #fff; /* White text */
+    background: url('attributes/nav-icon1.svg') no-repeat center center; /* Sets the background image */
+    background-size: contain; /* Scales the image to fit the button */
+    border: none; /* Removes default border */
+    cursor: pointer; /* Shows pointer on hover */
+    font-size: 14px; /* Adjusts font size */
+    transition: transform 0.3s ease; /* Adds a hover effect */
+}
+
+nav div .button.linkedin:hover {
+    transform: scale(1.1); /* Slightly enlarges the button on hover */
+    filter: brightness(1.2); /* Makes the button brighter on hover */
+}
+
+
+nav div .button.button1 {
+    display: inline-block; /* Makes the button inline */
+    text-decoration: none; /* Removes underline */
+    padding: 14px 40px; /* Adds padding */
+    color: #fff; /* White text */
+    background-image: linear-gradient(45deg, #df4881, #c430d7); /* Gradient background */
+    background-size: 200%; /* Enlarges the gradient */
+    background-position: center; /* Centers the gradient */
+    font-size: 14px; /* Font size */
+    border: none; /* Removes default border */
+    border-radius: 30px; /* Rounds edges */
+    border-top-right-radius: 0;
+    transition: 0.5s; /* Smooth hover effect */
+}
+
+/* Hover Effect for the Resume Button */
+nav div .button.button1:hover {
+    background-position: right; /* Shifts the gradient on hover */
+    border-top-right-radius: 30px;
+}
+
+div .content h1 {
+  display: flex; /* Enables flexbox */
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering */
+  height: 200px; /* Example height for the container */
+}
+
+div .content h1 {
+  opacity: 1; /* Correct usage of opacity */
+}
+
+div .content h2 {
+  display: flex; /* Enables flexbox */
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering */
+  height: 200px; /* Example height for the container */
+}
+
+div .content h2 {
+  opacity: 1; /* Correct usage of opacity */
+}
+
+
+
+.face{
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering */
+  height: 300px;
+  width: 300px;
+}
+
+body {
             margin: 0;
             padding: 0;
             background-image: url('attributes/background.png');
@@ -76,54 +207,5 @@
         .contact-form button:hover {
             background-color: #0056b3;
         }
-    </style>
-</head>
-<body>
-<div class="susu">
-    <nav>
-        <ul>
-            <li><a href="#home">home</a></li>
-            <li><a href="#about">about</a></li>
-            <li><a href="#projects">projects</a></li>
-            <li><a href="#contact">contact</a></li>
-        </ul>
-        <div>
-            <button class="button linkedin" onclick="window.open('https://www.linkedin.com/in/suhani-surya/')">
 
-            </button>
-            <button class="button button1" onclick="window.open('https://drive.google.com/file/d/1W55Ylm8vEg3UYjGjN3haEmirM0lXiywC/view?usp=sharing')">
-                My Resume!
-            </button>
-        </div>
-    </nav>
 
-    <section id="home" class="content">
-        <h1>Hi, I'm Suhani!</h1>
-        <h2>I am a student at UWaterloo studying Systems Design Engineering.</h2>
-        <div class="face">
-            <a href="attributes/susu.png"><img src="attributes/susu.png" alt="susu"></a>
-        </div>
-    </section>
-
-    <section id="about" class="content">
-        <h1>About Me!</h1>
-    </section>
-
-    <section id="projects" class="content">
-        <h1>Check Out My Projects!</h1>
-    </section>
-
-    <section id="contact" class="content">
-        <h1>Contact Me!</h1>
-        <div class="contact-form">
-            <form>
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </div>
-    </section>
-</div>
-</body>
-</html>
