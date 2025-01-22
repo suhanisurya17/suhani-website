@@ -106,5 +106,26 @@ nav div .button.button1:hover {
 }
 
 div .content h1 {
-    text-align: center;
+  display: flex; /* Enables flexbox */
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering */
+  height: 200px; /* Example height for the container */
 }
+
+div .content h1 {
+  opacity: 1; /* Correct usage of opacity */
+}
+
+
+div .face a {
+  display: flex; /* Enables flexbox */
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering */
+  height: 200px; /* Example height for the container */
+}
+
+div .face {
+  opacity: 1; /* Correct usage of opacity */
+}
+
+
