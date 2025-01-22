@@ -1,37 +1,129 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>suhani's website!</title>
+    <title>Suhani's Website</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('attributes/background.png');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            overflow-y: scroll;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: transparent; /* Translucent background */
+            backdrop-filter: blur(10px); /* Applies blur to content underneath */
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav div {
+            display: flex;
+            gap: 10px;
+        }
+        section {
+            padding: 100px 20px;
+            color: white;
+            text-align: center;
+            text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+        }
+        .content h1, .content h2 {
+            margin-bottom: 20px;
+        }
+        .face img {
+            max-width: 100px;
+            border-radius: 50%;
+        }
+        .contact-form {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .contact-form input, .contact-form textarea, .contact-form button {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background-color: pink;
+            color: white;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
 <div class="susu">
     <nav>
-        <!--<img src="attributes/logo.png" class="logo">-->
         <ul>
-            <li><a href="index.html">home</a></li>
-            <li><a href="about.html">about</a></li>
-            <li><a href="projects.html">projects</a></li>
-            <li><a href="contact.html">contact</a></li>
+            <li><a href="#home">home</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#projects">projects</a></li>
+            <li><a href="#contact">contact</a></li>
         </ul>
-
         <div>
-<!--            <a class="btn"href="#">resume</a>-->
             <button class="button linkedin" onclick="window.open('https://www.linkedin.com/in/suhani-surya/')">
-                <a href="https://www.linkedin.com/in/suhani-surya/"></a></button>
 
+            </button>
             <button class="button button1" onclick="window.open('https://drive.google.com/file/d/1W55Ylm8vEg3UYjGjN3haEmirM0lXiywC/view?usp=sharing')">
                 My Resume!
             </button>
         </div>
     </nav>
-    <div class ="content">
-        <h1>hi im suhani!</h1>
-    </div>
-    <div class="face"><a href="attributes/susu.png"><img src="attributes/susu.png" alt="susu"></a>
-    </div>
-</div>
 
+    <section id="home" class="content">
+        <h1>Hi, I'm Suhani!</h1>
+        <h2>I am a student at UWaterloo studying Systems Design Engineering.</h2>
+        <div class="face">
+            <a href="attributes/susu.png"><img src="attributes/susu.png" alt="susu"></a>
+        </div>
+    </section>
+
+    <section id="about" class="content">
+        <h1>About Me!</h1>
+    </section>
+
+    <section id="projects" class="content">
+        <h1>Check Out My Projects!</h1>
+    </section>
+
+    <section id="contact" class="content">
+        <h1>Contact Me!</h1>
+        <div class="contact-form">
+            <form>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+</div>
 </body>
 </html>
