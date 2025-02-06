@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suhani's Website</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    </style>
+</head>
+<body>
+<div class="susu">
+    <nav>
+        <ul>
+            <li><a href="#home">home</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#projects">projects</a></li>
+            <li><a href="#contact">contact</a></li>
+
+<!--            code for scrolling-->
+<!--            <script>-->
+<!--    document.querySelectorAll('.scroll-link').forEach(link => {-->
+<!--        link.addEventListener('click', function(e) {-->
+<!--            e.preventDefault(); // Prevent the default link behavior-->
+
+<!--            const targetId = this.getAttribute('href').substring(1); // Get target ID (without #)-->
+<!--            const targetElement = document.getElementById(targetId);-->
+
+<!--            if (targetElement) {-->
+<!--                window.scrollTo({-->
+<!--                    top: targetElement.offsetTop,-->
+<!--                    behavior: 'smooth'-->
+<!--                });-->
+<!--            }-->
+<!--        });-->
+<!--    });-->
+<!--</script>-->
+
+
+        </ul>
+        <div>
+            <button class="button linkedin" onclick="window.open('https://www.linkedin.com/in/suhani-surya/')">
+
+            </button>
+            <button class="button button1" onclick="window.open('https://drive.google.com/file/d/1W55Ylm8vEg3UYjGjN3haEmirM0lXiywC/view?usp=sharing')">
+                My Resume!
+            </button>
+        </div>
+    </nav>
+
+    <section id="home" class="content">
+        <h1>Hi, I'm Suhani!</h1>
+        <h2>I am a student at UWaterloo studying Systems Design Engineering.</h2>
+        <img src="attributes/susu.png" class="face">
+    </section>
+
+    <section id="about" class="content">
+        <h1>About Me!</h1>
+        <section id="about-me" class="content">
+            <p id="intro">Hi, I'm Suhani! I'm a student at the University of Waterloo, pursuing Systems Design Engineering. I am passionate about blending design and technology to solve real-world problems and create innovative solutions.</p>
+            <p id="intro12"><br>Beyond academics and work, I have a diverse skill set, including microcontroller programming, AutoCAD, SolidWorks, and Figma. I enjoy programming, photography, playing badminton and tennis, and traveling to explore new places.</p>
+        </section>
+
+    </section>
+
+    <section id="projects" class="content">
+        <h1>Check Out My Projects!</h1>
+        <section id="project" class="content">
+            <div class="project-container">
+                <button class="project" style="background-image: url('attributes/traffic-light.jpeg');" onclick="window.open('https://github.com/suhanisurya17/traffic-light-simulator')">Traffic Light Simulator</button>
+                <button class="project" style="background-image: url('attributes/temp-sensor.jpeg');" onclick="window.open('https://github.com/suhanisurya17/temperature-sensor')">Temperature Sensor</button>
+                <button class="project" style="background-image: url('attributes/library-book-project.jpeg');" onclick="window.open('https://github.com/suhanisurya17/book-and-library-class-project')">Book and Library Project</button>
+            </div>
+            <div class="project-container">
+                <button class="project" style="background-image: url('attributes/seats-organization.jpeg');" onclick="window.open('https://github.com/suhanisurya17/TheatreSeatingArrays')">Seats Organization Project</button>
+                <button class="project" style="background-image: url('attributes/text-recognition.jpeg');" onclick="window.open('https://github.com/suhanisurya17/OCR_PROJECT')">Text Extractor Project</button>
+                <button class="project" style="background-image: url('attributes/just-relax.jpeg');" onclick="window.open('https://github.com/suhanisurya17/Just-Relax')">Just Relax</button>
+            </div>
+        </section>
+    </section>
+
+
+    <section id="contact" class="content">
+        <h1>Contact Me!</h1>
+        <div class="contact-form">
+
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="5dd02bdb-120b-4957-a117-861f62727bc3">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+</div>
+</body>
+</html>
