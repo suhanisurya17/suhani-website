@@ -292,10 +292,10 @@ body {
     background-image: url('attributes/just-relax.jpeg');
 }
 
-.button-container:hover .button
+/* .button-container:hover .button
 {
       filter: blur(5px);
-}
+} */
 .project {
     position: relative;
     overflow: hidden;
@@ -326,10 +326,10 @@ body {
     z-index: 2; /* Ensure text is above the blurry background */
 }
 
-.project:hover::before {
+/* .project:hover::before {
     opacity: 1;
     backdrop-filter: blur(5px);
-}
+} */
 
 .project:hover .project-text {
     opacity: 1;
