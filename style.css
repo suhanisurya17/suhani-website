@@ -359,3 +359,20 @@ div.scroll-container {
     height:300px;
     width: 450px;
   }
+
+  #canvasContainer {
+    width: 800px;
+    height: 600px;
+    overflow: scroll;
+    border: 1px solid black;
+    align-items: center;
+    background-color: white;
+}
+
+canvas {
+    display: block;
+}
+
+#cadCanvas {
+    align-items: center;
+}

@@ -108,6 +108,87 @@
             <img src="attributes/Range Rover Side View.png">
         </div>
 
+        <h1>AutoCAD Drawings</h1>
+
+        <div id="canvasContainer" style="align-items: center;">
+            <canvas id="cadCanvas" width="1600" height="1200"></canvas>
+        </div>
+        <script>
+            const canvas = document.getElementById('cadCanvas');
+            const ctx = canvas.getContext('2d');
+            const container = document.getElementById('canvasContainer'); // Make sure this line is present
+    
+            // Load the SVG file
+            const img = new Image();
+            img.onload = function() {
+                ctx.drawImage(img, 0, 0);
+            };
+            img.src = 'attributes/range-rover.svg'; // Replace with the path to your SVG file
+    
+            // Zoom and pan variables
+            let scale = 1;
+            let originX = 0;
+            let originY = 0;
+    
+            // Handle mouse wheel for zooming
+            container.addEventListener('wheel', function(event) {
+                event.preventDefault();
+                const zoomFactor = 1.1;
+                const mouseX = event.offsetX;
+                const mouseY = event.offsetY;
+    
+                if (event.deltaY < 0) {
+                    // Zoom in
+                    scale *= zoomFactor;
+                    originX = mouseX - (mouseX - originX) * zoomFactor;
+                    originY = mouseY - (mouseY - originY) * zoomFactor;
+                } else {
+                    // Zoom out
+                    scale /= zoomFactor;
+                    originX = mouseX - (mouseX - originX) / zoomFactor;
+                    originY = mouseY - (mouseY - originY) / zoomFactor;
+                }
+    
+                draw();
+            });
+    
+            // Handle mouse drag for panning
+            let isDragging = false;
+            let startX, startY;
+    
+            container.addEventListener('mousedown', function(event) {
+                isDragging = true;
+                startX = event.clientX - originX;
+                startY = event.clientY - originY;
+            });
+    
+            container.addEventListener('mousemove', function(event) {
+                if (isDragging) {
+                    originX = event.clientX - startX;
+                    originY = event.clientY - startY;
+                    draw();
+                }
+            });
+    
+            container.addEventListener('mouseup', function() {
+                isDragging = false;
+            });
+    
+            container.addEventListener('mouseleave', function() {
+                isDragging = false;
+            });
+    
+            function draw() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.save();
+                ctx.translate(originX, originY);
+                ctx.scale(scale, scale);
+                ctx.drawImage(img, 0, 0);
+                ctx.restore();
+            }
+        </script>
+
+
 
     <section id="contact" class="content">
         <h1>Contact Me!</h1>
